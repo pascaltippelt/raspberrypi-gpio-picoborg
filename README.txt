@@ -1,1 +1,1 @@
-soon.
+To install raspberrypi-gpio-picoborg unzip it an run "install.sh" as root ( sudo ./install.sh )

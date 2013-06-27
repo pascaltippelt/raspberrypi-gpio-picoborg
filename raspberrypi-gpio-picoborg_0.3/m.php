@@ -106,7 +106,7 @@ body {
 </p>
 </div>
 <div align="center">
-<p>&copy; 2013 <a href="http://go-seven.de">Pascal Tippelt</a> - <a href="m.php">Desktop Version</a></p>
+<p>&copy; 2013 <a href="http://go-seven.de">Pascal Tippelt</a> - <a href="index.php">Desktop Version</a></p>
 </div>
 </div>
 </body>
