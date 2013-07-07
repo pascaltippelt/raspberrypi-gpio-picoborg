@@ -1,3 +1,11 @@
+<script type="text/javascript">
+<!--
+if (screen.width <= 799) {
+document.location = "mobil";
+}
+//-->
+</script>
+
 <?php
     
 	if (isset($_POST['GPIO4-1']))
