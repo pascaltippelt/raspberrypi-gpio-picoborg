@@ -1,13 +1,5 @@
-<script type="text/javascript">
-<!--
-if (screen.width <= 799) {
-document.location = "mobil";
-}
-//-->
-</script>
-
 <?php
-    
+    include ('auth.php');
 	if (isset($_POST['GPIO4-1']))
     {
          shell_exec("gpio -g write 4 1");
@@ -73,37 +65,33 @@ document.location = "mobil";
 	};
 			
 ?>
-<html>
+<!doctype html>
+<!--[if lt IE 7]> <html class="ie6 oldie"> <![endif]-->
+<!--[if IE 7]>    <html class="ie7 oldie"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="">
+<!--<![endif]-->
 <head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Raspberry Pi GPIO</title>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<link rel="icon" type="image/png" href="img/favicon.png" />
-<style type="text/css">
-body {
-	background-image: url(img/bg.jpg);
-	background-repeat: repeat-x;
-	}
-.all {
-	width: 100%;
-	font-size: 16px;
-	}
-info {
-	width: 300px;
-    }
-</style>
+<link href="boilerplate.css" rel="stylesheet" type="text/css">
+<link href="mobil.css" rel="stylesheet" type="text/css">
+
+<script src="respond.min.js"></script>
 </head>
 <body>
-<div class="all">
-<div align="center">
-<h1>Raspberry Pi GPIO</h1>
-</div>
-<div align="center">
-<div>
+<div class="gridContainer clearfix" align="center">
+  <div align="center">
+  <h1>Raspberry Pi GPIO</h1>
+  </div>
+  <div>
 <form method="post">
-<p><button name="setgpio">GPIO's setzen</button> falls es beim Start fehl schlug.</p>
+<p><button name="setgpio" style="width: 120px; background-image: url(img/trans.jpg)">Set GPIO-state</button> if failed at startup..</p>
 </form>
 </div>
-<div class="info">
+<div>
 	<form method="post">
 	  <p>GPIO 4
 <button name="GPIO4-1" style="width: 50px; background-image: url(img/bbg.jpg)">ein</button> 
@@ -116,13 +104,13 @@ info {
 	    <button name="GPIO18-1" style="width: 50px; background-image: url(img/bbg.jpg)">ein</button> <button name="GPIO18-0" style="width: 50px; background-image: url(img/bbgr.jpg)">aus</button> Status:<img src="img/<?php echo "$color18"; ?>.png"></p>
 	</form>
     </div>
+    <div align="center">
+    <p><img src="img/<?php echo "$image4"; ?>.png" ><img src="img/<?php echo "$image18"; ?>.png" ><img src="img/<?php echo "$image8"; ?>.png" ><img src="img/<?php echo "$image7"; ?>.png" >
+</p>
+
     </div>
 <div align="center">
-<p><img src="img/<?php echo "$image4"; ?>.png" ><img src="img/<?php echo "$image18"; ?>.png" ><img src="img/<?php echo "$image8"; ?>.png" ><img src="img/<?php echo "$image7"; ?>.png" >
-</p>
-</div>
-<div align="center">
-<p>&copy; 2013 <a href="http://go-seven.de">Pascal Tippelt</a></p>
+<p>&copy; 2013 Pascal Tippelt <a href="logout.php">LOGOUT</a> </p>
 </div>
 </div>
 </body>
