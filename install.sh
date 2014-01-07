@@ -7,6 +7,7 @@ sudo chown pi:pi /var/www/*
 cp * /var/www
 mkdir /var/www/img
 cp img/* /var/www/img
+rm /var/www/index.html
 sudo echo "gpio -g mode 4 out" > /bin/setgpio
 sudo echo "gpio -g mode 7 out" >> /bin/setgpio
 sudo echo "gpio -g mode 8 out" >> /bin/setgpio
